@@ -12,15 +12,15 @@
   }
 
   module.factory('scrollTop', function($rootScope) {
-    var duration;
+    var doScroll, duration;
     duration = 500;
-    return $rootScope.$on('$stateChangeSuccess', function(e, curr) {
-      if ($('body').scrollTop() > 0) {
-        return $('html, body').animate({
-          scrollTop: 0
-        }, duration);
-      }
-    });
+    doScroll = $('body').scrollTop() > 0 ? $('html, body').animate({
+      scrollTop: 0
+    }, duration) : void 0;
+    $rootScope.$on('$stateChangeSuccess', doScroll);
+    return {
+      go: doScroll
+    };
   });
 
 }).call(this);
