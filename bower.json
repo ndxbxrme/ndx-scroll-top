@@ -1,0 +1,17 @@
+{
+  "name": "ndx-scroll-top",
+  "description": "scroll to top on page change for ndx-framework",
+  "main": "build/index.js",
+  "authors": [
+    "ndxbxrme"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ndxbxrme/ndx-scroll-top",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
