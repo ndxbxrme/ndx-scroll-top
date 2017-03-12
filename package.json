@@ -1,6 +1,6 @@
 {
   "name": "ndx-scroll-top",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "scroll to top on page change for ndx-framework",
   "main": "build/index.js",
   "scripts": {
