@@ -4,7 +4,7 @@ try
   module = angular.module 'ndx'
 catch e
   module = angular.module 'ndx', []
-module.factory 'scrollTop', ($rootScope) ->
+module.run ($rootScope) ->
   duration = 500
   doScroll = 
     if $('body').scrollTop() > 0
@@ -12,4 +12,3 @@ module.factory 'scrollTop', ($rootScope) ->
         scrollTop: 0
       , duration
   $rootScope.$on '$stateChangeSuccess', doScroll
-  go: doScroll
