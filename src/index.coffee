@@ -7,7 +7,6 @@ catch e
 module.run ($rootScope) ->
   duration = 500
   doScroll = ->
-    console.log 'i want to scroll'
     if $('body').scrollTop() > 0
       $('html, body').animate
         scrollTop: 0

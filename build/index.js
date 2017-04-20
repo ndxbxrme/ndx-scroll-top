@@ -15,7 +15,6 @@
     var doScroll, duration;
     duration = 500;
     doScroll = function() {
-      console.log('i want to scroll');
       if ($('body').scrollTop() > 0) {
         return $('html, body').animate({
           scrollTop: 0
