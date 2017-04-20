@@ -6,7 +6,7 @@ catch e
   module = angular.module 'ndx', []
 module.run ($rootScope) ->
   duration = 500
-  doScroll = 
+  doScroll = ->
     console.log 'i want to scroll'
     if $('body').scrollTop() > 0
       $('html, body').animate
