@@ -4,11 +4,11 @@ try
   module = angular.module 'ndx'
 catch e
   module = angular.module 'ndx', []
-module.run ($rootScope) ->
+module.run ($transitions) ->
   duration = 500
   doScroll = ->
-    if $('body').scrollTop() > 0
+    if $('html, body').scrollTop() > 0
       $('html, body').animate
         scrollTop: 0
       , duration
-  $rootScope.$on '$stateChangeSuccess', doScroll
+  $transitions.onFinish {}, doScroll

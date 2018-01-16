@@ -11,17 +11,17 @@
     module = angular.module('ndx', []);
   }
 
-  module.run(function($rootScope) {
+  module.run(function($transitions) {
     var doScroll, duration;
     duration = 500;
     doScroll = function() {
-      if ($('body').scrollTop() > 0) {
+      if ($('html, body').scrollTop() > 0) {
         return $('html, body').animate({
           scrollTop: 0
         }, duration);
       }
     };
-    return $rootScope.$on('$stateChangeSuccess', doScroll);
+    return $transitions.onFinish({}, doScroll);
   });
 
 }).call(this);
